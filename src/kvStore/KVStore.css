@@ -1,0 +1,35 @@
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.flex-item {
+    margin: 10px;
+}
+
+.input-container {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px; /* 调整间距 */
+}
+
+.input-container input {
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+/* 设置按钮宽度 */
+.input-container button {
+    width: 300px; /* 或者其他固定值 */
+}
+
+.request1 {
+    width: 100%;
+}
+
+.request2 {
+    margin-right: 10px;
+}
