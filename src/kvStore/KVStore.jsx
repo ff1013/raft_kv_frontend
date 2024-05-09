@@ -78,10 +78,16 @@ function getHttpPut(key, value) {
 function getHttpDelete(key) {
     axios.delete('http://localhost:12100/' + key)
         .then(response => {
-            console.log("删除key成功");
+            notification.success({
+                message: '成功',
+                description: '成功删除键值',
+            });
         })
         .catch(error => {
-            console.error("删除key失败", error);
+            notification.error({
+                message: '失败',
+                description: '删除键值失败', error
+            });
         });
 }
 
@@ -124,6 +130,11 @@ function KVStore() {
                     <Input className="flex-item" onChange={appendValueChange} placeholder='附加到原值后的value' />
                     <Button className="flex-item" type="primary" size="large" onClick={() => { getHttpPut(appendKey, appendValue) }} >Append</Button>
                 </div>
+                {/* 功能4：Delete */}
+                <div className="input-container">
+                    <Input className="flex-item" onChange={deleteKeyChange} placeholder='请输入要删除的key' />
+                    <Button className="flex-item" type="primary" size="large" onClick={() => { getHttpDelete(deleteKey) }} >delete</Button>
+                </div>
             </Flex>
         </>
     )
@@ -131,5 +142,3 @@ function KVStore() {
 
 export default KVStore
 
-// <Input onChange={deleteKeyChange} placeholder='请输入要删除的key' />
-// <Button type="primary" size="large" onClick={() => { getHttpDelete(deleteKey) }} >删除delete请求</Button>

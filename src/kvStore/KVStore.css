@@ -9,7 +9,7 @@
 }
 
 .input-container {
-    width: 80%;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -17,13 +17,14 @@
 }
 
 .input-container input {
+    width: 300px;
     margin-right: 10px;
     font-weight: bold;
 }
 
 /* 设置按钮宽度 */
 .input-container button {
-    width: 300px; /* 或者其他固定值 */
+    width: 100px; /* 或者其他固定值 */
 }
 
 .request1 {
